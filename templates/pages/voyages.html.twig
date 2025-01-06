@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>Liste des Voyages</h1>
+    <ul>
+        {% for voyage in voyages %}
+            <li>
+                <strong>{{ voyage.ville }}</strong> ({{ voyage.pays }}) - {{ voyage.description }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
